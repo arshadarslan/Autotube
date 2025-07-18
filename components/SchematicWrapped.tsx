@@ -1,6 +1,6 @@
 "use client";
 
-import { useSchematic, useSchematicEvents } from "@schematichq/schematic-react";
+import { useSchematicEvents } from "@schematichq/schematic-react";
 import { Key } from "lucide-react";
 import { useEffect } from "react";
 import { useUser } from "@clerk/nextjs"
@@ -21,12 +21,12 @@ const SchematicWrapped = ({children}: {children: React.ReactNode}) => {
             identify({
                 // Company Level Key
                 company: {
-                    keys: {
+                    key: {
                         id: user.id,
                     },
                     name: userName,
                 },
-                keys: {
+                key: {
                     id: user.id,
                 },
                 name: userName,
